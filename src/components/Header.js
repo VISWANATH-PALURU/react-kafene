@@ -19,7 +19,7 @@ const Header = ({loggedIn,setLoggedIn}) => {
                 <div className={styles.topbar}>
                     <div className={styles.topbar_LeftMenu}>
                         <div className={styles.topbar_logoWrapper}><img
-                            src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png" alt="Logo" />
+                            src="" alt="Logo" />
                             <p className={styles.topbar_brandName}>Kafene</p>
                         </div>
                         <nav>
