@@ -103,7 +103,7 @@ const Orders = () => {
                             </thead>
                             <tbody id="tbody">
                                 {
-                                    displayOrders !== [] ? displayOrders.map((item, idx) => (
+                                    displayOrders != [] ? displayOrders.map((item, idx) => (
                                         <tr className='Homepage_TableRow' key={item.id + '' + idx}>
                                             <td className="Homepage_SecondaryText">{item.id}</td>
                                             <td className="Homepage_PrimaryText">{item.customerName}</td>
