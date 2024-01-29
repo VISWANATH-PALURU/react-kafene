@@ -43,24 +43,21 @@ const Products = () => {
         for (const product of products) {
             let { expiryDate, stock } = product
 
-            if (filters['low_stock'] === true && !filters['expired']) {
+            if (filters['expired'] === true && !filters['low_stock']) {
                 const newDate = new Date()
                 expiryDate = new Date(expiryDate)
-                if (expiryDate > newDate) {
+                if (expiryDate < newDate) {
                     disprod.push(product)
                 }
             }
-            if (filters['expired'] && !filters['low_stock']) {
+            if (filters['low_stock'] && !filters['expired']) {
                 if (stock < 100) {
                     disprod.push(product)
                 }
             }
             if (!filters['expired'] && !filters['low_stock']) {
-                const newDate = new Date()
-                expiryDate = new Date(expiryDate)
-                if (expiryDate > newDate && stock < 100) {
+                
                     disprod.push(product)
-                }
             }
 
             setDisplayProducts(disprod);
