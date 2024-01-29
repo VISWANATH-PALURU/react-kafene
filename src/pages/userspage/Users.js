@@ -67,7 +67,7 @@ const Users = () => {
                             </thead>
                             <tbody id="tbody">
                                 {
-                                    displayUsers !== [] ? displayUsers.map((item, idx) => (
+                                    displayUsers != [] ? displayUsers.map((item, idx) => (
                                         <tr className='Homepage_TableRow' key={item.id + '' + idx}>
 
                                             <td className="UserList_SecondaryText">{item.id}</td>

@@ -51,14 +51,14 @@ const Products = () => {
                 }
             }
             if (filters['expired'] && !filters['low_stock']) {
-                if (stock > 100) {
+                if (stock < 100) {
                     disprod.push(product)
                 }
             }
             if (!filters['expired'] && !filters['low_stock']) {
                 const newDate = new Date()
                 expiryDate = new Date(expiryDate)
-                if (expiryDate > newDate && stock > 100) {
+                if (expiryDate > newDate && stock < 100) {
                     disprod.push(product)
                 }
             }
@@ -112,7 +112,7 @@ const Products = () => {
                             </thead>
                             <tbody id="tbody">
                                 {
-                                    displayProducts !== [] ? displayProducts.map((item, idx) => (
+                                    displayProducts != [] ? displayProducts.map((item, idx) => (
                                         <tr className='Homepage_TableRow' key={item.id + '' + idx}>
                                             <td className="Homepage_SecondaryText">{item.id}</td>
                                             <td className="Homepage_PrimaryText">{item.medicineName}</td>
